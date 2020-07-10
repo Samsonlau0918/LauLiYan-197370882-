@@ -1,0 +1,67 @@
+html{
+    overflow-x: hidden;
+}
+
+body{
+    margin: 0;
+    padding-right: 0 !important;
+    box-sizing: border-box;
+}
+
+#top-navs .navbar{
+    background-color: darkgray;
+    width:100%;
+}
+
+#top-navs a{
+    font-family: 'Raleway', sans-serif;
+}
+
+.col-9{
+    min-height: 100vh;
+    bottom: 0;
+}
+
+#content .row .col-3{
+    background-color: lightgrey;
+    padding-right: 0;
+    bottom: 0;
+}
+
+#content .tab-pane{
+    padding: 15px;
+}
+
+#content .nav-link.active{
+    background-color: lightslategrey;
+}
+
+.modal-title {
+    padding: 5px;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+img.addTofav {
+    max-width: 15px;
+    max-height: 15px;
+    float: right;
+    margin: 5px;
+}
+
+#comment-input {
+    min-height: 300px;
+}
+
+.btn:not(:disabled):not(.disabled) {
+    float: right;
+    margin: 5px;
+}
+
+#myCard {
+    max-width: 300px;
+}
+
+#user-info {
+    padding: 20px;
+}

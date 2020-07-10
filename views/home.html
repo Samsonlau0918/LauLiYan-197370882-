@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="user_controller.js"></script>
+        <script type="text/javascript" src="card_controller.js"></script>
+        <script type="text/javascript" src="comment_controller.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#top-navs').load("header.html");
+                $('#login-modal').load("modal.html #login");
+                $('#register-modal').load("modal.html #register");
+                $('#comment-modal').load("modal.html section#comment");
+                is_login();
+                getCardData();
+                favHandler();
+                checkfav();
+            });
+        </script>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        
+        <title>Sora - a new card game</title>
+   </head> 
+   <body>
+       <section id="top-navs"></section>
+       <section id="content">
+           <div class="row">
+                <div class="col-3">
+                    <div class="nav flex-column nav-pills" id="pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+                        <a class="nav-link" id="pills-card-tab" data-toggle="pill" href="#pills-card" role="tab" aria-controls="pills-card" aria-selected="false">Card</a>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                            <h1>Sora</h1>
+                            <p>This is new card game about magic and sword!!</p>
+                            <p>Please enjoy this card game!!</p>
+                            <p>You can know more about this card game in this website!!</p>
+                        </div>
+                        <div class="tab-pane fade" id="pills-card" role="tabpanel" aria-labelledby="pills-card-tab">
+                            <div id="post-card" class="row row-cols-1 row-cols-md-3">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+       </section>
+       <section id="login-modal"></section>
+       <section id="register-modal"></section>
+       <section id="comment-modal"></section>
+   </body>
+</html>

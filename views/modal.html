@@ -1,0 +1,169 @@
+<section id="login">
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Sign in</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/login" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="login-email" name="email" placeholder="E-mail" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="login-password" name="password" placeholder="Password" required="required">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="success_login()">Login</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" href="#registerModal">Create new account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="register">
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Register</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/register" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="register-email" name="email" placeholder="E-mail" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="register-name" name="username" placeholder="User Name" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="register-password" name="password" placeholder="Password" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="register-c-password" name="confirm_password" placeholder="Confirm Password" required="required">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="success_register()">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="register">
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Register</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/register" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="register-email" name="email" placeholder="E-mail" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="register-name" name="username" placeholder="User Name" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="register-password" name="password" placeholder="Password" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="register-c-password" name="confirm_password" placeholder="Confirm Password" required="required">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="success_register()">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="comment">
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="commentModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="commentModalLongTitle">Comment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <ul class="list-unstyled">
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Comment:</label>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                    </div>
+                    <button id="commnet-send" class="btn btn-outline-secondary" type="button" onclick="postComment()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="editComment">
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="editcommentModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editcommentModalLongTitle">Edit Comment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="comment">New comment:</label>
+                        <input type="text" class="form-control" id="edit-comment">
+                    </div>
+                    <button id="commnet-edit" class="btn btn-outline-secondary" type="button" onclick="editcomment()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="changepwd">
+    <div class="modal fade" id="change-pwd" tabindex="-1" role="dialog" aria-labelledby="editcommentModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editcommentModalLongTitle">Edit Comment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="comment">New Password:</label>
+                        <input type="text" class="form-control" id="new-password">
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">New Confirm Password:</label>
+                        <input type="text" class="form-control" id="new-confirm-password">
+                    </div>
+                    <button id="change-pwd" class="btn btn-outline-secondary" type="button" onclick="change_password()">Change</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
